@@ -10,12 +10,14 @@ repos = response.json()
 
 for repo in repos:
     name = repo["name"]
-    directory = "~/GitHub/" + name
-    source = repo["git_url"]
+    directory = "/home/alex/GitHub/" + name
+    source = repo["ssh_url"]
 
     if os.path.exists(directory):
+        print("Pulling " + directory)
         os.chdir(directory)
         os.system("git pull")
     else:
-        os.chdir("~/GitHub")
+        print("Creating " + directory)
+        os.chdir("/home/alex/GitHub/")
         os.system("git clone " + source)
