@@ -1,0 +1,20 @@
+[general]
+ui = ttyui
+accounts = gmail
+pythonfile = ~/.offlineimap/password.py
+
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+postsynchook = notmuch new
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/mail/gmail
+
+[Repository gmail-remote]
+type = Gmail
+remoteuser = user@gmail.com
+remotepasseval = gmail_password
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl_version = tls1_2
