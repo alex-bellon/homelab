@@ -1,6 +1,6 @@
 import os, requests
 
-GITHUB_API_KEY = os.environ["GITHUB_API_KEY"]
+GITHUB_API_KEY = str(open("github.token","r").read().strip("\n"))
 
 headers = {"Authorization": "token " + GITHUB_API_KEY}
 url = "https://api.github.com/user/repos?per_page=100&type=owner"
