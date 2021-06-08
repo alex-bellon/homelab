@@ -12,7 +12,6 @@ def download_video(update, context):
     text = message.text
     sender = message.from_user
     
-    success = os.system('youtube-dl -o \'~/Videos/%(title)s\' ' + text)
     success = os.system('youtube-dl -o \'/media/alex/Media/YouTube/%(title)s\' ' + text)
 
     if success == 0:
