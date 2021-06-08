@@ -1,2 +1,5 @@
-# Watch Later Downloader
+# Media Downloader
 python-youtube
+
+# Reddit Scraper
+bdfr
