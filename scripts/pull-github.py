@@ -1,11 +1,14 @@
+#! /bin/python3
 import os, requests
+from dotenv import load_dotenv
 
-GITHUB_API_KEY = str(open("github.token","r").read().strip("\n"))
+load_dotenv('.env')
+GITHUB_KEY = os.getenv('GITHUB_KEY')
 
-headers = {"Authorization": "token " + GITHUB_API_KEY}
-url = "https://api.github.com/user/repos?per_page=100&type=owner"
+headers = {"Authorization": "token " + GITHUB_KEY}
+url = "https://api.github.com/user/repos?per_page=200&type=owner"
 
-response= requests.get(url, headers=headers)
+response = requests.get(url, headers=headers)
 repos = response.json()
 
 for repo in repos:

@@ -3,3 +3,6 @@ python-youtube
 
 # Reddit Scraper
 bdfr
+
+# Creds
+python-dotenv
