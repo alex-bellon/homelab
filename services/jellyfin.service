@@ -1,0 +1,9 @@
+[Unit]
+Description=Jellyfin
+
+[Service]
+WorkingDirectory=/home/alex/GitHub/homelab/src/jellyfin
+ExecStart=/bin/bash jellyfin.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Meal Picker
+
+[Service]
+WorkingDirectory=/home/alex/GitHub/meal-picker
+ExecStart=/usr/bin/docker-compose up --build -d
+
+[Install]
+WantedBy=multi-user.target

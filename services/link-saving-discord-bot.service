@@ -1,0 +1,10 @@
+[Unit]
+Description=Link saving Discord bot
+
+[Service]
+WorkingDirectory=/home/alex/GitHub/link-saving-discord-bot
+ExecStartPre=/usr/bin/docker build -t link-bot .
+ExecStart=/usr/bin/docker run link-bot
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Pull GitHub
+
+[Service]
+WorkingDirectory=/home/alex/GitHub/homelab/src/pull-github
+ExecStart=/bin/bash pull-github.sh
+
+[Install]
+WantedBy=multi-user.target
